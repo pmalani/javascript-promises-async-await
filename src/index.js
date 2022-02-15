@@ -11,10 +11,10 @@ const getBooksAndMovies = () => {
 
 const getBooksAndMoviesPromise = getBooksAndMovies();
 getBooksAndMoviesPromise.then(results => {
-    console.log('getBooksAndMoviesPromize', results);
-})
+    console.log('getBooksAndMoviesPromise', results);
+});
 
-export function getBooksOrMovies() {
+function getBooksOrMovies() {
     return Promise.race([fetchBooks(), fetchMovies()])
         .then(results => results)
         .catch(error => {
