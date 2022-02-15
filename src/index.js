@@ -5,8 +5,8 @@ const getBooksAndMovies = () => {
         .then(([books, movies]) => ({
             books,
             movies
-        })
-            .catch(error => console.log("Error fetching books and movies", error)));
+        }))
+        .catch(error => console.log("Error fetching books and movies", error));
 
 }
 
